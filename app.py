@@ -1,5 +1,5 @@
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QFrame, QWidget, QStackedWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QFrame, QWidget, QStackedWidget, QTextEdit, QLabel
 import sys
 
 # to open designer
@@ -13,6 +13,7 @@ class App(QMainWindow):
 
         # pages
         self.stack = self.findChild(QStackedWidget, "stackedWidget")
+
         # menu buttons
         self.home = self.findChild(QPushButton, "home_button").clicked.connect(
             lambda: self.stack.setCurrentWidget(self.findChild(QWidget, "page_1")))
@@ -27,6 +28,10 @@ class App(QMainWindow):
         self.zip = self.findChild(QPushButton, "zip_button").clicked.connect(
             lambda: self.stack.setCurrentWidget(self.findChild(QWidget, "page_6")))
 
+        # keylogger
+        self.keylogger_start = self.findChild(QPushButton, "start_keylogger")
+        self.keylogger_output = self.findChild(QTextEdit, "output_k")
+
         # ransomware
         self.r_stack = self.findChild(QStackedWidget, "ransom_stack")
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_1"))  # set to first page
@@ -37,7 +42,19 @@ class App(QMainWindow):
         self.r_5 = self.findChild(QPushButton, "ransom_bt__5").clicked.connect(self.ransom_decrypt)
         self.r_6 = self.findChild(QPushButton, "ransom_bt__6").clicked.connect(self.ransom_return)
 
+        # wifi
+        self.wifi_button = self.findChild(QPushButton, "wifi_button")
+        self.wifi_output = self.findChild(QPushButton, "wifi_output")
+
+        # zip
+        self.zip_path_label = self.findChild(QLabel, "file_label")
+        self.zip_find_file = self.findChild(QPushButton, "find_file")
+        self.zip_start = self.findChild(QPushButton, "zip_start")
+
         self.show()
+
+        self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_1"))
+        self.stack.setCurrentWidget(self.findChild(QWidget, "page_1"))
 
     def ransom_start(self):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_2"))
