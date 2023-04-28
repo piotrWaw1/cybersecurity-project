@@ -379,7 +379,7 @@ QPushButton:hover {
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>4</number>
             </property>
             <widget class="QWidget" name="page_1">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -451,7 +451,7 @@ QPushButton:hover {
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true"/>
+                  <string notr="true">background-color:#343434;</string>
                  </property>
                  <property name="text">
                   <string>Keylogger</string>
@@ -463,11 +463,73 @@ QPushButton:hover {
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
+                <widget class="QPushButton" name="start_keylogger">
+                 <property name="geometry">
+                  <rect>
+                   <x>340</x>
+                   <y>90</y>
+                   <width>151</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <weight>50</weight>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Start keylogger</string>
+                 </property>
+                </widget>
+                <widget class="QTextEdit" name="output">
+                 <property name="geometry">
+                  <rect>
+                   <x>160</x>
+                   <y>190</y>
+                   <width>511</width>
+                   <height>191</height>
+                  </rect>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_7">
+                 <property name="geometry">
+                  <rect>
+                   <x>160</x>
+                   <y>165</y>
+                   <width>131</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Captured characters</string>
+                 </property>
+                </widget>
                </widget>
               </item>
              </layout>
             </widget>
             <widget class="QWidget" name="page_3">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <item>
                <widget class="QFrame" name="ransomware">
@@ -494,7 +556,7 @@ QPushButton:hover {
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true"/>
+                  <string notr="true">background-color:#343434;</string>
                  </property>
                  <property name="text">
                   <string>Ransomware</string>
@@ -505,6 +567,337 @@ QPushButton:hover {
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
+                </widget>
+                <widget class="QStackedWidget" name="ransom_stack">
+                 <property name="geometry">
+                  <rect>
+                   <x>110</x>
+                   <y>80</y>
+                   <width>651</width>
+                   <height>311</height>
+                  </rect>
+                 </property>
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="ransom_1">
+                  <widget class="QLabel" name="label_8">
+                   <property name="geometry">
+                    <rect>
+                     <x>200</x>
+                     <y>90</y>
+                     <width>261</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Po naciśnięciu przycisku start program przygotuje 
+     potrzebne pliki do zasymulowania ataku</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="ransom_bt__1">
+                   <property name="geometry">
+                    <rect>
+                     <x>250</x>
+                     <y>160</y>
+                     <width>151</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Start</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_9">
+                   <property name="geometry">
+                    <rect>
+                     <x>200</x>
+                     <y>10</y>
+                     <width>181</width>
+                     <height>61</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Atak dzieli się na dwie strony:&lt;/span&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;atakujacego (hakera) &lt;/span&gt;&lt;/li&gt;&lt;li style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;ofiary &lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="ransom_2">
+                  <widget class="QLabel" name="label_10">
+                   <property name="geometry">
+                    <rect>
+                     <x>100</x>
+                     <y>10</y>
+                     <width>461</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Na pulpicie został umieszczony folder localRoot który symuluje komputer ofiary.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_11">
+                   <property name="geometry">
+                    <rect>
+                     <x>100</x>
+                     <y>40</y>
+                     <width>321</width>
+                     <height>71</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Jako haker musisz teraz wygenerować dwa klucze &lt;/span&gt;&lt;span style=&quot;color:rgb(85, 170, 255); font-size:10pt; font-weight:600;&quot;&gt;RSA&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot;color:rgb(85, 170, 255); font-size:10pt; font-weight:600;&quot;&gt;Prywatny&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:rgb(85, 170, 255); font-size:10pt; font-weight:600;&quot;&gt;Publiczny&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="ransom_bt__2">
+                   <property name="geometry">
+                    <rect>
+                     <x>240</x>
+                     <y>130</y>
+                     <width>151</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Generate keys</string>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="ransom_3">
+                  <widget class="QLabel" name="label_12">
+                   <property name="geometry">
+                    <rect>
+                     <x>120</x>
+                     <y>10</y>
+                     <width>391</width>
+                     <height>71</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Teraz dalej jako haker wysyłasz swojemu celowi przygotowany plik&lt;br&gt; z programem szyfrującym i &lt;span style=&quot;color:rgb(85, 170, 255); font-weight:600;&quot;&gt;publiczny&lt;/span&gt; klucz &lt;span style=&quot;color:rgb(85, 170, 255); font-weight:600;&quot;&gt;RSA&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Dla uproszczenia załóżmy że ofiara już pobrała złośliwy program &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="ransom_bt__3">
+                   <property name="geometry">
+                    <rect>
+                     <x>240</x>
+                     <y>130</y>
+                     <width>151</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Wyślij wirusa</string>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="ransom_4">
+                  <widget class="QLabel" name="label_13">
+                   <property name="geometry">
+                    <rect>
+                     <x>130</x>
+                     <y>10</y>
+                     <width>391</width>
+                     <height>111</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Teraz jako ofiara uruchom wirusa.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;color:#9c0e0e; font-weight:600;&quot;&gt;Uwaga!!!&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;color:rgb(85, 170, 255); font-weight:600;&quot;&gt;Folder localRoot zostanie zaszyfrowany a na pulpicie &lt;br/&gt;pojawi się plik RANSOME.txt i zostanie włączona&lt;br/&gt; strona internetowa&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="ransom_bt__4">
+                   <property name="geometry">
+                    <rect>
+                     <x>240</x>
+                     <y>140</y>
+                     <width>151</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Uruchom wirusa</string>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="ransom_5">
+                  <widget class="QLabel" name="label_14">
+                   <property name="geometry">
+                    <rect>
+                     <x>100</x>
+                     <y>-10</y>
+                     <width>471</width>
+                     <height>161</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Program (&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;wirus&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;) podczas działania generuje klucz &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;BASE64 &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;którego&lt;br/&gt;używa do szyfrowania plików w folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Następnie klucz &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;BASE64&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; jest szyfrowany &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;publicznym&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; kluczem &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;RSA&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&lt;br/&gt;i zapisywany do pliku &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;EMAILME.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; na pulpicie.&lt;br/&gt;Na koniec program przechodzi w tryb oczekiwania na plik PUTMEONDESKTOP.txt.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Plik ten może zostać odszyfrowany tylko przy pomocy &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;prywantego&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; klucza &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;RSA&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Możesz zobaczyć czy pliki w folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;color:#9c0e0e;&quot;&gt;localRoot &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;są zaszyfrowane.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="ransom_bt__5">
+                   <property name="geometry">
+                    <rect>
+                     <x>240</x>
+                     <y>170</y>
+                     <width>151</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Wyslij okup</string>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="ransom_6">
+                  <widget class="QLabel" name="label_15">
+                   <property name="geometry">
+                    <rect>
+                     <x>70</x>
+                     <y>0</y>
+                     <width>561</width>
+                     <height>231</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;W folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;powinien się pojawić plik &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;EMAILME.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Umieść ten plik na pulpicie a folder &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; zostanie odszyfrowany.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#e1d708;&quot;&gt;Gratulacje.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#e1d708;&quot;&gt;Twoje pliki zostały odzyskane.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#9c0e0e;&quot;&gt;Proszę nie pobieraj programów z nienznanego źródła aby twoje pliki&lt;br/&gt;nie skończyły tak jak w przedztawionym scenariuszu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="ransom_bt__6">
+                   <property name="geometry">
+                    <rect>
+                     <x>260</x>
+                     <y>250</y>
+                     <width>151</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Wróć na początek</string>
+                   </property>
+                  </widget>
+                 </widget>
                 </widget>
                </widget>
               </item>
@@ -537,7 +930,7 @@ QPushButton:hover {
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true"/>
+                  <string notr="true">background-color:#343434;</string>
                  </property>
                  <property name="text">
                   <string>Worm</string>
@@ -580,7 +973,7 @@ QPushButton:hover {
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true"/>
+                  <string notr="true">background-color:#343434;</string>
                  </property>
                  <property name="text">
                   <string>Wifi password extractor</string>
@@ -590,6 +983,65 @@ QPushButton:hover {
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QPlainTextEdit" name="plainTextEdit">
+                 <property name="geometry">
+                  <rect>
+                   <x>200</x>
+                   <y>180</y>
+                   <width>441</width>
+                   <height>171</height>
+                  </rect>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_17">
+                 <property name="geometry">
+                  <rect>
+                   <x>200</x>
+                   <y>160</y>
+                   <width>231</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Zapisane hasła do wifi na komputerze</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="find_file_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>340</x>
+                   <y>90</y>
+                   <width>161</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <weight>50</weight>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Pobierz hasła</string>
                  </property>
                 </widget>
                </widget>
@@ -623,7 +1075,7 @@ QPushButton:hover {
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true"/>
+                  <string notr="true">background-color:#343434;</string>
                  </property>
                  <property name="text">
                   <string>Zip password cracker</string>
@@ -633,6 +1085,84 @@ QPushButton:hover {
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="find_file">
+                 <property name="geometry">
+                  <rect>
+                   <x>340</x>
+                   <y>120</y>
+                   <width>161</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <weight>50</weight>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Find file</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="zip_start">
+                 <property name="geometry">
+                  <rect>
+                   <x>340</x>
+                   <y>220</y>
+                   <width>161</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <weight>50</weight>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Start</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_16">
+                 <property name="geometry">
+                  <rect>
+                   <x>190</x>
+                   <y>90</y>
+                   <width>471</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color:#343434;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;File path&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </widget>
