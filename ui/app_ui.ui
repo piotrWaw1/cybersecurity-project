@@ -379,7 +379,7 @@ QPushButton:hover {
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>4</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="page_1">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -494,7 +494,7 @@ QPushButton:hover {
                   <string>Start keylogger</string>
                  </property>
                 </widget>
-                <widget class="QTextEdit" name="output">
+                <widget class="QTextEdit" name="output_k">
                  <property name="geometry">
                   <rect>
                    <x>160</x>
@@ -578,7 +578,7 @@ QPushButton:hover {
                   </rect>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>5</number>
                  </property>
                  <widget class="QWidget" name="ransom_1">
                   <widget class="QLabel" name="label_8">
@@ -863,7 +863,7 @@ QPushButton:hover {
                     </rect>
                    </property>
                    <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;W folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;powinien się pojawić plik &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;EMAILME.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Umieść ten plik na pulpicie a folder &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; zostanie odszyfrowany.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#e1d708;&quot;&gt;Gratulacje.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#e1d708;&quot;&gt;Twoje pliki zostały odzyskane.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#9c0e0e;&quot;&gt;Proszę nie pobieraj programów z nienznanego źródła aby twoje pliki&lt;br/&gt;nie skończyły tak jak w przedztawionym scenariuszu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;W folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;powinien się pojawić plik &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;EMAILME.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Umieść ten plik na pulpicie a folder &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; zostanie odszyfrowany.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#e1d708;&quot;&gt;Gratulacje.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#e1d708;&quot;&gt;Twoje pliki zostały odzyskane.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#9c0e0e;&quot;&gt;Proszę nie pobieraj programów z nieznanego źródła aby twoje pliki&lt;br/&gt;nie skończyły tak jak w przedztawionym scenariuszu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
                   <widget class="QPushButton" name="ransom_bt__6">
@@ -985,7 +985,7 @@ QPushButton:hover {
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
-                <widget class="QPlainTextEdit" name="plainTextEdit">
+                <widget class="QPlainTextEdit" name="wifi_output">
                  <property name="geometry">
                   <rect>
                    <x>200</x>
@@ -1013,7 +1013,7 @@ QPushButton:hover {
                   <string>Zapisane hasła do wifi na komputerze</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="find_file_2">
+                <widget class="QPushButton" name="wifi_button_2">
                  <property name="geometry">
                   <rect>
                    <x>340</x>
@@ -1149,7 +1149,7 @@ QPushButton:hover {
                   <string>Start</string>
                  </property>
                 </widget>
-                <widget class="QLabel" name="label_16">
+                <widget class="QLabel" name="file_label">
                  <property name="geometry">
                   <rect>
                    <x>190</x>
