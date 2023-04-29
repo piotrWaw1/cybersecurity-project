@@ -379,7 +379,7 @@ QPushButton:hover {
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>2</number>
+             <number>4</number>
             </property>
             <widget class="QWidget" name="page_1">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -520,6 +520,24 @@ QPushButton:hover {
                  </property>
                  <property name="text">
                   <string>Captured characters</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_16">
+                 <property name="geometry">
+                  <rect>
+                   <x>160</x>
+                   <y>390</y>
+                   <width>331</width>
+                   <height>16</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Wszystkie przechwycone znaki zapisują się w pliku log.txt</string>
                  </property>
                 </widget>
                </widget>
@@ -985,16 +1003,6 @@ QPushButton:hover {
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
-                <widget class="QPlainTextEdit" name="wifi_output">
-                 <property name="geometry">
-                  <rect>
-                   <x>200</x>
-                   <y>180</y>
-                   <width>441</width>
-                   <height>171</height>
-                  </rect>
-                 </property>
-                </widget>
                 <widget class="QLabel" name="label_17">
                  <property name="geometry">
                   <rect>
@@ -1013,7 +1021,7 @@ QPushButton:hover {
                   <string>Zapisane hasła do wifi na komputerze</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="wifi_button_2">
+                <widget class="QPushButton" name="wifi_button_start">
                  <property name="geometry">
                   <rect>
                    <x>340</x>
@@ -1042,6 +1050,16 @@ QPushButton:hover {
                  </property>
                  <property name="text">
                   <string>Pobierz hasła</string>
+                 </property>
+                </widget>
+                <widget class="QTextEdit" name="wifi_output">
+                 <property name="geometry">
+                  <rect>
+                   <x>200</x>
+                   <y>180</y>
+                   <width>461</width>
+                   <height>201</height>
+                  </rect>
                  </property>
                 </widget>
                </widget>
