@@ -1,15 +1,47 @@
+import time
+
 from PyQt5 import uic
+from PyQt5.QtCore import QObject, QThread, pyqtSignal
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QFrame, QWidget, QStackedWidget, QTextEdit, QLabel
 import sys
 
+import os
+from threading import Thread, Timer
+
+from malwares.keylogger.keylogger import start_keylogger
+
+
 # to open designer
 # qt5-tools designer
+
+
+class Worker(QObject):
+    finished = pyqtSignal()
+    progress = pyqtSignal(str)
+
+    def read_log(self):
+        with open('log.txt', 'r') as f:
+            f.seek(0, 2)
+            start_time = time.time()
+            while True:
+                line = f.readline()
+                if time.time() - start_time >= 10:
+                    break
+                if not line:
+                    time.sleep(0.1)
+                    continue
+                self.progress.emit(line)
+        print("END thread")
+        self.finished.emit()
+
 
 class App(QMainWindow):
     def __init__(self):
         super(App, self).__init__()
         uic.loadUi("ui/app_ui.ui", self)
         self.setWindowTitle("app")
+
+        self.desktop = os.path.expanduser('~') + "\\Desktop"
 
         # pages
         self.stack = self.findChild(QStackedWidget, "stackedWidget")
@@ -30,7 +62,15 @@ class App(QMainWindow):
 
         # keylogger
         self.keylogger_start = self.findChild(QPushButton, "start_keylogger")
+        self.keylogger_start.clicked.connect(self.keylogger_run)
         self.keylogger_output = self.findChild(QTextEdit, "output_k")
+        self.k_keylogger_thread = Thread(target=start_keylogger)
+        self.k_log_thread = None
+        self.k_text = ''
+
+        self.k_log_thread = QThread()
+        self.k_worker = Worker()
+        self.k_worker.moveToThread(self.k_log_thread)
 
         # ransomware
         self.r_stack = self.findChild(QStackedWidget, "ransom_stack")
@@ -53,8 +93,31 @@ class App(QMainWindow):
 
         self.show()
 
-        self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_1"))
         self.stack.setCurrentWidget(self.findChild(QWidget, "page_1"))
+
+    def keylogger_run(self):
+        self.k_keylogger_thread.start()
+
+        self.k_log_thread.started.connect(self.k_worker.read_log)
+        self.k_worker.finished.connect(self.k_log_thread.quit)
+        self.k_worker.finished.connect(self.k_worker.deleteLater)
+        self.k_log_thread.finished.connect(self.k_log_thread.deleteLater)
+        self.k_worker.progress.connect(self.k_report_progress)
+
+        self.k_log_thread.start()
+
+        self.keylogger_start.setEnabled(False)
+        self.keylogger_output.setEnabled(False)
+        self.k_log_thread.finished.connect(self.k_reset)
+
+    def k_reset(self):
+        self.keylogger_start.setEnabled(True)
+        self.keylogger_output.setEnabled(True)
+        self.k_text = ''
+
+    def k_report_progress(self, text):
+        self.k_text += text
+        self.keylogger_output.setText(f'{self.k_text}')
 
     def ransom_start(self):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_2"))
@@ -73,6 +136,7 @@ class App(QMainWindow):
 
     def ransom_return(self):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_1"))
+
 
 app = QApplication(sys.argv)
 win = App()
