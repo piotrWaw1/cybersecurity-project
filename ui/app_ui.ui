@@ -379,7 +379,7 @@ QPushButton:hover {
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>4</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="page_1">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -602,9 +602,9 @@ QPushButton:hover {
                   <widget class="QLabel" name="label_8">
                    <property name="geometry">
                     <rect>
-                     <x>200</x>
+                     <x>180</x>
                      <y>90</y>
-                     <width>261</width>
+                     <width>291</width>
                      <height>41</height>
                     </rect>
                    </property>
@@ -652,7 +652,7 @@ QPushButton:hover {
                   <widget class="QLabel" name="label_9">
                    <property name="geometry">
                     <rect>
-                     <x>200</x>
+                     <x>230</x>
                      <y>10</y>
                      <width>181</width>
                      <height>61</height>
@@ -682,19 +682,19 @@ QPushButton:hover {
                     <rect>
                      <x>100</x>
                      <y>40</y>
-                     <width>321</width>
-                     <height>71</height>
+                     <width>341</width>
+                     <height>101</height>
                     </rect>
                    </property>
                    <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Jako haker musisz teraz wygenerować dwa klucze &lt;/span&gt;&lt;span style=&quot;color:rgb(85, 170, 255); font-size:10pt; font-weight:600;&quot;&gt;RSA&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot;color:rgb(85, 170, 255); font-size:10pt; font-weight:600;&quot;&gt;Prywatny&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:rgb(85, 170, 255); font-size:10pt; font-weight:600;&quot;&gt;Publiczny&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Jako haker musisz teraz wygenerować dwa klucze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;RSA&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;Prywatny&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;Publiczny&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;Zostaną one umieszczone na pulpicie w folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#ca0003;&quot;&gt;hacker&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#ffffff;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
                   <widget class="QPushButton" name="ransom_bt__2">
                    <property name="geometry">
                     <rect>
                      <x>240</x>
-                     <y>130</y>
+                     <y>160</y>
                      <width>151</width>
                      <height>41</height>
                     </rect>
@@ -729,7 +729,7 @@ QPushButton:hover {
                      <x>120</x>
                      <y>10</y>
                      <width>391</width>
-                     <height>71</height>
+                     <height>101</height>
                     </rect>
                    </property>
                    <property name="font">
@@ -738,7 +738,7 @@ QPushButton:hover {
                     </font>
                    </property>
                    <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Teraz dalej jako haker wysyłasz swojemu celowi przygotowany plik&lt;br&gt; z programem szyfrującym i &lt;span style=&quot;color:rgb(85, 170, 255); font-weight:600;&quot;&gt;publiczny&lt;/span&gt; klucz &lt;span style=&quot;color:rgb(85, 170, 255); font-weight:600;&quot;&gt;RSA&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Dla uproszczenia załóżmy że ofiara już pobrała złośliwy program &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Teraz dalej jako haker wysyłasz swojemu celowi przygotowany plik&lt;br/&gt;z programem szyfrującym i &lt;span style=&quot; font-weight:600; color:#55aaff;&quot;&gt;publiczny&lt;/span&gt; klucz &lt;span style=&quot; font-weight:600; color:#55aaff;&quot;&gt;RSA&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Dla uproszczenia załóżmy że ofiara bez myślnie pobiera i uruchamia&lt;br&gt; każdy napotkany plik w internecie. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
                   <widget class="QPushButton" name="ransom_bt__3">
@@ -831,18 +831,18 @@ QPushButton:hover {
                      <x>100</x>
                      <y>-10</y>
                      <width>471</width>
-                     <height>161</height>
+                     <height>191</height>
                     </rect>
                    </property>
                    <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Program (&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;wirus&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;) podczas działania generuje klucz &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;BASE64 &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;którego&lt;br/&gt;używa do szyfrowania plików w folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Następnie klucz &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;BASE64&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; jest szyfrowany &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;publicznym&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; kluczem &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;RSA&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&lt;br/&gt;i zapisywany do pliku &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;EMAILME.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; na pulpicie.&lt;br/&gt;Na koniec program przechodzi w tryb oczekiwania na plik PUTMEONDESKTOP.txt.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Plik ten może zostać odszyfrowany tylko przy pomocy &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;prywantego&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; klucza &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;RSA&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Możesz zobaczyć czy pliki w folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;color:#9c0e0e;&quot;&gt;localRoot &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;są zaszyfrowane.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Program (&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;wirus&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;) podczas działania generuje klucz &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;BASE64 &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;którego&lt;br/&gt;używa do szyfrowania plików w folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Następnie klucz &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;BASE64&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; jest szyfrowany &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;publicznym&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; kluczem &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;RSA&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&lt;br/&gt;i zapisywany do pliku &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;EMAILME.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; na pulpicie.&lt;br/&gt;Na koniec program przechodzi w tryb oczekiwania na plik &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;PUTMEONDESKTOP.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Plik &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;EMAILME.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; może zostać odszyfrowany tylko przy pomocy &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;prywantego&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;br&gt;klucza &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;RSA&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Możesz zobaczyć czy pliki w folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#9c0e0e;&quot;&gt;localRoot &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;są zaszyfrowane.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
                   <widget class="QPushButton" name="ransom_bt__5">
                    <property name="geometry">
                     <rect>
                      <x>240</x>
-                     <y>170</y>
+                     <y>190</y>
                      <width>151</width>
                      <height>41</height>
                     </rect>
@@ -870,6 +870,52 @@ QPushButton:hover {
                    </property>
                   </widget>
                  </widget>
+                 <widget class="QWidget" name="page">
+                  <widget class="QPushButton" name="ransom_bt__6">
+                   <property name="geometry">
+                    <rect>
+                     <x>240</x>
+                     <y>100</y>
+                     <width>151</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+	border-radius: 20px;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Odszyfruj plik i wyślij</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_18">
+                   <property name="geometry">
+                    <rect>
+                     <x>170</x>
+                     <y>20</y>
+                     <width>321</width>
+                     <height>61</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Teraz jako hacker odszyfruj &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;i wyślij&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;plik &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;EMAILME.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Plik pojawi się w floderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#ffffff;&quot;&gt;. &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;&lt;br/&gt;Aby odszyfrować pliki przeciągnij go na &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;pulpit&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </widget>
                  <widget class="QWidget" name="ransom_6">
                   <widget class="QLabel" name="label_15">
                    <property name="geometry">
@@ -884,7 +930,7 @@ QPushButton:hover {
                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;W folderze &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;powinien się pojawić plik &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;EMAILME.txt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Umieść ten plik na pulpicie a folder &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#55aaff;&quot;&gt;localRoot&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; zostanie odszyfrowany.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#e1d708;&quot;&gt;Gratulacje.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#e1d708;&quot;&gt;Twoje pliki zostały odzyskane.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#9c0e0e;&quot;&gt;Proszę nie pobieraj programów z nieznanego źródła aby twoje pliki&lt;br/&gt;nie skończyły tak jak w przedztawionym scenariuszu.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
-                  <widget class="QPushButton" name="ransom_bt__6">
+                  <widget class="QPushButton" name="ransom_bt__7">
                    <property name="geometry">
                     <rect>
                      <x>260</x>
@@ -1060,6 +1106,33 @@ QPushButton:hover {
                    <width>461</width>
                    <height>201</height>
                   </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="lineWidth">
+                  <number>5</number>
+                 </property>
+                 <property name="midLineWidth">
+                  <number>0</number>
+                 </property>
+                 <property name="verticalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAsNeeded</enum>
+                 </property>
+                 <property name="horizontalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAsNeeded</enum>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </widget>
