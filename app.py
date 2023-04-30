@@ -82,7 +82,7 @@ class App(QMainWindow):
         self.r_2 = self.findChild(QPushButton, "ransom_bt__2").clicked.connect(self.ransom_keys)
         self.r_3 = self.findChild(QPushButton, "ransom_bt__3").clicked.connect(self.ransom_send)
         self.r_4 = self.findChild(QPushButton, "ransom_bt__4").clicked.connect(self.ransom_run)
-        self.r_5 = self.findChild(QPushButton, "ransom_bt__5").clicked.connect(self.ransom_decrypt)
+        self.r_5 = self.findChild(QPushButton, "ransom_bt__5").clicked.connect(self.send_ransom)
         self.r_6 = self.findChild(QPushButton, "ransom_bt__6").clicked.connect(self.ransom_send_dec)
         self.r_7 = self.findChild(QPushButton, "ransom_bt__7").clicked.connect(self.ransom_return)
 
@@ -146,11 +146,11 @@ class App(QMainWindow):
         self.r_thread.start()
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_5"))
 
-    def ransom_decrypt(self):
+    def send_ransom(self):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_6"))
 
-    # def ransom_send_dec(self):
-
+    def ransom_send_dec(self):
+        self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_7"))
 
     def ransom_return(self):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_1"))
