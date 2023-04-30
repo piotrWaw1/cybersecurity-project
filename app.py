@@ -14,6 +14,7 @@ from shutil import copytree
 from malwares.keylogger.keylogger import start_keylogger
 from malwares.ransomware.generate_public_private_keys import generate
 from malwares.ransomware.ransom import start
+from malwares.ransomware.decode import decrypt_fernet_key
 # to open designer
 # qt5-tools designer
 
@@ -150,6 +151,7 @@ class App(QMainWindow):
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_6"))
 
     def ransom_send_dec(self):
+        decrypt_fernet_key()
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_7"))
 
     def ransom_return(self):
