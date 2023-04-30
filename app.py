@@ -132,7 +132,7 @@ class App(QMainWindow):
         if not os.path.exists(self.hacker_dir):
             os.makedirs(self.hacker_dir)
         else:
-            os.system('rm -rf {}'.format(self.hacker_dir))
+            os.system('rmdir /s /q {}'.format(self.hacker_dir))
             os.makedirs(self.hacker_dir)
         self.r_stack.setCurrentWidget(self.findChild(QWidget, "ransom_2"))
 
