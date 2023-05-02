@@ -379,7 +379,7 @@ QPushButton:hover {
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>2</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="page_1">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -1249,11 +1249,29 @@ QPushButton:hover {
                    <height>21</height>
                   </rect>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true">background-color:#343434;</string>
                  </property>
                  <property name="text">
                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;File path&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="zip_password">
+                 <property name="geometry">
+                  <rect>
+                   <x>196</x>
+                   <y>280</y>
+                   <width>471</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;&lt;br/&gt;Password:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </widget>

