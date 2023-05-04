@@ -31,6 +31,7 @@ class Worker(QObject):
     def __init__(self, file=None):
         super().__init__()
         self.file = file
+
     def read_log(self):
         with open('log.txt', 'r') as f:
             f.seek(0, 2)
@@ -62,6 +63,7 @@ class Worker(QObject):
                 except:
                     pass
         self.finished.emit()
+
 
 class App(QMainWindow):
 
@@ -252,6 +254,7 @@ class App(QMainWindow):
 
     def zip_report(self, text):
         self.zip_resukt_label.setText(f'Password: {text}')
+
 
 app = QApplication(sys.argv)
 win = App()

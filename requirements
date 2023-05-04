@@ -1,0 +1,10 @@
+pyqt5-tools
+cryptography
+pycryptodome
+pycryptodomex
+pynput
+pyzipper
+requests
+urllib3
+shellescape
+setuptools
