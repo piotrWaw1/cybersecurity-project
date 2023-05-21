@@ -293,29 +293,6 @@ QPushButton:hover {
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="worm_button">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>40</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
-	color: rgb(255, 255, 255);
-	background-color: rgb(35, 35, 35);
-	border: 0px solid;
-}
-QPushButton:hover {
-	background-color: rgb(85, 170, 255);
-}</string>
-               </property>
-               <property name="text">
-                <string>Worm</string>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QPushButton" name="wifi_button">
                <property name="minimumSize">
                 <size>
@@ -379,7 +356,7 @@ QPushButton:hover {
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>5</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="page_1">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -418,6 +395,41 @@ QPushButton:hover {
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_19">
+                 <property name="geometry">
+                  <rect>
+                   <x>270</x>
+                   <y>50</y>
+                   <width>351</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Aplikacja ma na celu zaprezentować działanie najbardziej&lt;br/&gt;popularnego oprogramowania typu malware&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_20">
+                 <property name="geometry">
+                  <rect>
+                   <x>320</x>
+                   <y>100</y>
+                   <width>181</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;
+&lt;body&gt;
+	&lt;ul style=&quot;font-size: 14px;&quot;&gt; 
+		&lt;li&gt;Keylogger&lt;/li&gt;
+		&lt;li&gt;Ransomware&lt;/li&gt;
+		&lt;li&gt;Wifi password extractor&lt;/li&gt;
+		&lt;li&gt;Zip password cracker&lt;/li&gt;
+	&lt;/ul&gt;
+
+&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </widget>

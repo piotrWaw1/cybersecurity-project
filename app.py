@@ -84,8 +84,6 @@ class App(QMainWindow):
             lambda: self.stack.setCurrentWidget(self.findChild(QWidget, "page_2")))
         self.ransomware = self.findChild(QPushButton, "ransomware_button").clicked.connect(
             lambda: self.stack.setCurrentWidget(self.findChild(QWidget, "page_3")))
-        self.worm = self.findChild(QPushButton, "worm_button").clicked.connect(
-            lambda: self.stack.setCurrentWidget(self.findChild(QWidget, "page_4")))
         self.wifi = self.findChild(QPushButton, "wifi_button").clicked.connect(
             lambda: self.stack.setCurrentWidget(self.findChild(QWidget, "page_5")))
         self.zip = self.findChild(QPushButton, "zip_button").clicked.connect(
